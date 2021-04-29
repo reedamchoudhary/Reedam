@@ -159,19 +159,24 @@
     color: white;
 }
 
+.buttons button:active{
+    background-color: #4d4949;
+    color: white;
+}
+
 .tab-items{
     width: 100%;
     height: 100%;
     /* background-color: #4d4949; */
 }
 
-#Tab2-content{
+/* #Tab2-content{
     display: none;
 }
 
 #Tab3-content{
     display: none;
-}
+} */
 
 #Drinks{
     margin-top: 20px ;
@@ -212,8 +217,13 @@ tr,td{
 
 }
 
+.minus,.add{
+    cursor: pointer;
+}
+
 tr{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .inputs{
@@ -230,4 +240,51 @@ tr{
     padding:5px 5px;
     margin: 5px;
     border: 1px solid black;
+}
+
+/* .invisible{
+    display: none;
+}
+
+.visible{
+    display: block;
+} */
+
+[data-tab-content]{
+    display: none;
+}
+
+.active[data-tab-content]{
+    display: block;
+}
+
+.check-list{
+    padding-left: 50px;
+}
+
+.added-item{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.added-item p{
+    margin-left: 0;
+    padding: 10px 15px;
+}
+
+.Drinks-shopping,.Food-shopping,.Dessert-shopping{
+    margin: 20px 0;
+}
+
+.check-list div h4{
+    margin-bottom: 5px;
+}
+
+.added-item p{
+    font-weight: 500;
+}
+
+.lighten{
+    opacity: 0.4;
 }

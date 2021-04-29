@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200&family=Playfair+Display&family=Source+Sans+Pro:wght@300;400&display=swap" rel="stylesheet">
+    <script src="index.js" defer></script>
+    
 </head>
 <body>
     <div class="webpage">
@@ -29,12 +31,14 @@
                 <div class="items">
                     <h4>Table 5 - Mrs. Einstein</h4>
                     <div class="buttons">
-                        <button class="tab">Drinks</button>
-                        <button class="tab">Food</button>
-                        <button class="tab">Dessert</button>
+                        <button class="tab" data-tab-target="#Tab1-content">Drinks</button>
+                        <button class="tab" data-tab-target="#Tab2-content">Food</button>
+                        <button class="tab" data-tab-target="#Tab3-content">Dessert</button>
                     </div>
+                    <!-- ******************** TAB CONTENTS************* -->
                     <div class="tab-content">
-                        <div class="tab-items" id="Tab1-content">
+                        <!-- *********************DRINKS*********************** -->
+                        <div class="tab-items active" id="Tab1-content" data-tab-content>
                             <select id="Drinks" name="Drinks">
                                 <option value="wine">Wine</option>
                                 <option value="whisky">Whisky</option>
@@ -43,81 +47,81 @@
                             </select>
                             <table style="width:100%">
                                 <tr>
-                                  <td class="item">
+                                  <td class="item lighten">
                                       <img src="images/bottle.jpg" alt="" class="item-img">
-                                      <div class="item-details">
+                                      <div class="item-details Drink" id="item1">
                                         <p>Beaux Freres</p>
                                         <p>$7.50</p>
                                         <div class="inputs">
-                                            <div>-</div>
-                                            <div>0</div>
-                                            <div>+</div>
+                                            <div class="minus" data-add-item="#item1-count">-</div>
+                                            <div class="count" id="item1-count">0</div>
+                                            <div class="add" data-add-item="#item1-count">+</div>
                                         </div>
                                       </div>
                                   </td>
-                                  <td class="item">
+                                  <td class="item lighten">
                                     <img src="images/bottle.jpg" alt="" class="item-img">
-                                    <div class="item-details">
+                                    <div class="item-details Drink">
                                       <p>Beaux Freres</p>
                                       <p>$7.50</p>
                                       <div class="inputs">
-                                          <div>-</div>
-                                          <div>0</div>
-                                          <div>+</div>
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
                                       </div>
                                     </div>
                                 </td>
                                   
                                 </tr>
                                 <tr>
-                                    <td class="item">
+                                    <td class="item lighten">
                                         <img src="images/bottle.jpg" alt="" class="item-img">
-                                        <div class="item-details">
+                                        <div class="item-details Drink">
                                           <p>Beaux Freres</p>
                                           <p>$7.50</p>
                                           <div class="inputs">
-                                              <div>-</div>
-                                              <div>0</div>
-                                              <div>+</div>
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
                                           </div>
                                         </div>
                                     </td>
-                                    <td class="item">
+                                    <td class="item lighten">
                                         <img src="images/bottle.jpg" alt="" class="item-img">
-                                        <div class="item-details">
+                                        <div class="item-details Drink">
                                           <p>Beaux Freres</p>
                                           <p>$7.50</p>
                                           <div class="inputs">
-                                              <div>-</div>
-                                              <div>0</div>
-                                              <div>+</div>
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
                                           </div>
                                         </div>
                                     </td>
                                   
                                 </tr>
                                 <tr>
-                                    <td class="item">
+                                    <td class="item lighten">
                                         <img src="images/bottle.jpg" alt="" class="item-img">
-                                        <div class="item-details">
+                                        <div class="item-details Drink">
                                           <p>Beaux Freres</p>
                                           <p>$7.50</p>
                                           <div class="inputs">
-                                              <div>-</div>
-                                              <div>0</div>
-                                              <div>+</div>
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
                                           </div>
                                         </div>
                                     </td>
-                                    <td class="item">
+                                    <td class="item lighten">
                                         <img src="images/bottle.jpg" alt="" class="item-img">
-                                        <div class="item-details">
+                                        <div class="item-details Drink">
                                           <p>Beaux Freres</p>
                                           <p>$7.50</p>
                                           <div class="inputs">
-                                              <div>-</div>
-                                              <div>0</div>
-                                              <div>+</div>
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
                                           </div>
                                         </div>
                                     </td>
@@ -125,13 +129,235 @@
                                 </tr>
                               </table>
                         </div>
-                        <div class="tab-items" id="Tab2-content">Some content of tab 2</div>
-                        <div class="tab-items" id="Tab3-content">Some content of tab 3</div>
+                        <!-- *********************FOOD*********************** -->
+                        <div class="tab-items " id="Tab2-content" data-tab-content>
+                            <!-- <select id="Food" name="Food">
+                            <option value="wine">Wine</option>
+                            <option value="whisky">Whisky</option>
+                            <option value="beer">Beer</option>
+                            <option value="vodka">Vodka</option>
+                        </select> -->
+                        <table style="width:100%">
+                            <tr>
+                              <td class="item lighten">
+                                  <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                  <div class="item-details">
+                                    <p>Tomatoes</p>
+                                    <p>$7.50</p>
+                                    <div class="inputs">
+                                        <div class="minus">-</div>
+                                        <div class="count">0</div>
+                                        <div class="add">+</div>
+                                    </div>
+                                  </div>
+                              </td>
+                              <td class="item lighten">
+                                <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                <div class="item-details">
+                                  <p>Tomatoes</p>
+                                  <p>$7.50</p>
+                                  <div class="inputs">
+                                      <div class="minus">-</div>
+                                      <div class="count">0</div>
+                                      <div class="add">+</div>
+                                  </div>
+                                </div>
+                            </td>
+                              
+                            </tr>
+                            <tr>
+                                <td class="item lighten">
+                                    <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                    <div class="item-details">
+                                      <p>Tomatoes</p>
+                                      <p>$7.50</p>
+                                      <div class="inputs">
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="item lighten">
+                                    <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                    <div class="item-details">
+                                      <p>Tomatoes</p>
+                                      <p>$7.50</p>
+                                      <div class="inputs">
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
+                                      </div>
+                                    </div>
+                                </td>
+                              
+                            </tr>
+                            <tr>
+                                <td class="item lighten">
+                                    <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                    <div class="item-details">
+                                      <p>Tomatoes</p>
+                                      <p>$7.50</p>
+                                      <div class="inputs">
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
+                                      </div>
+                                    </div>
+                                </td>
+                                <td class="item lighten">
+                                    <img src="images/tomatoes.jpg" alt="" class="item-img">
+                                    <div class="item-details">
+                                      <p>Tomatoes</p>
+                                      <p>$7.50</p>
+                                      <div class="inputs">
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
+                                      </div>
+                                    </div>
+                                </td>
+                              
+                            </tr>
+                          </table>
+                        </div>
+                        <!-- ********************************* DESSERT****************************** -->
+                        <div class="tab-items invisible" id="Tab3-content" data-tab-content>
+                            <select id="Drinks" name="Drinks">
+                                <option value="cakes">Cakes</option>
+                                <option value="chocolates">Chocolates</option>
+                                <option value="cheesecakes">Cheesecakes</option>
+                                <option value="pastries">Pastries</option>
+                            </select>
+                            <table style="width:100%">
+                                <tr>
+                                  <td class="item lighten">
+                                      <img src="images/rainbow-cake.jpg" alt="" class="item-img">
+                                      <div class="item-details">
+                                        <p>Rainbow cake</p>
+                                        <p>$7.50</p>
+                                        <div class="inputs">
+                                            <div class="minus">-</div>
+                                            <div class="count">0</div>
+                                            <div class="add">+</div>
+                                        </div>
+                                      </div>
+                                  </td>
+                                  <td class="item lighten">
+                                    <img src="images/rainbow-cake.jpg" alt="" class="item-img">
+                                    <div class="item-details">
+                                      <p>Rainbow cake</p>
+                                      <p>$7.50</p>
+                                      <div class="inputs">
+                                          <div class="minus">-</div>
+                                          <div class="count">0</div>
+                                          <div class="add">+</div>
+                                      </div>
+                                    </div>
+                                </td>
+                                  
+                                </tr>
+                                <tr>
+                                    <td class="item lighten">
+                                        <img src="images/rainbow-cake.jpg" alt="" class="item-img">
+                                        <div class="item-details">
+                                          <p>Rainbow cake</p>
+                                          <p>$7.50</p>
+                                          <div class="inputs">
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
+                                          </div>
+                                        </div>
+                                    </td>
+                                    <td class="item lighten">
+                                        <img src="images/reses-pearls.jpg" alt="" class="item-img">
+                                        <div class="item-details">
+                                          <p>Roses and Pearls</p>
+                                          <p>$7.50</p>
+                                          <div class="inputs">
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
+                                          </div>
+                                        </div>
+                                    </td>
+                                  
+                                </tr>
+                                <tr>
+                                    <td class="item lighten">
+                                        <img src="images/reses-pearls.jpg" alt="" class="item-img">
+                                        <div class="item-details">
+                                          <p>Roses and Pearls</p>
+                                          <p>$7.50</p>
+                                          <div class="inputs">
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
+                                          </div>
+                                        </div>
+                                    </td>
+                                    <td class="item lighten">
+                                        <img src="images/reses-pearls.jpg" alt="" class="item-img">
+                                        <div class="item-details">
+                                          <p>Roses and Pearls</p>
+                                          <p>$7.50</p>
+                                          <div class="inputs">
+                                              <div class="minus">-</div>
+                                              <div class="count">0</div>
+                                              <div class="add">+</div>
+                                          </div>
+                                        </div>
+                                    </td>
+                                  
+                                </tr>
+                              </table>
+                        </div>
                     </div>
                 </div>
-                <div class="check-list"></div>
+                <!-- *****************************CART************************* -->
+                <div class="check-list">
+                    <div class="switch"></div>
+                    <h4>Check</h4>
+                    <div class="Drinks-shopping">
+                        <h4>Drinks</h4>
+                        <ul>
+                            <li class="added-item">
+                                <p>Item Name</p>
+                                <p>Item Price</p>
+                                <p>Item Total</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="Food-shopping">
+                        <h4>Food</h4>
+                        <ul>
+                            <li class="added-item">
+                                <p>Item Name</p>
+                                <p>Item Price</p>
+                                <p>Item Total</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr>
+                    <div class="Dessert-shopping">
+                        <h4>Dessert</h4>
+                        <ul>
+                            <li class="added-item">
+                                <p>Item Name</p>
+                                <p>Item Price</p>
+                                <p>Item Total</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+
+
+    
 </body>
 </html>
